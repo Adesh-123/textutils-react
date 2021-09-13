@@ -9,8 +9,7 @@ import Alert from './components/Alert';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
@@ -31,19 +30,19 @@ function App() {
       stateMode('light');
       document.body.style.backgroundColor='white';
       showalert("light mode enable","success");
-      document.title="textutils light mode"
-      setTimeout(()=>{
-         document.title="textutils"
-      },2000)
+      // document.title="textutils light mode"
+      // setTimeout(()=>{
+      //    document.title="textutils"
+      // },2000)
     }
     else{
       stateMode('dark');
       document.body.style.backgroundColor='grey';
       showalert("dark mode enable","success");
-      document.title="textutils dark mode"
-      setTimeout(()=>{
-        document.title="textutils"
-     },2000)
+    //   document.title="textutils dark mode"
+    //   setTimeout(()=>{
+    //     document.title="textutils"
+    //  },2000)
     }
    }
   return (
@@ -54,10 +53,10 @@ function App() {
     <div className="container">
     <Switch>
           <Route path="/about">
-            <About />
+            <About mode={mode}/>
           </Route>
           <Route path="/">
-          <Textform heading ="ENTER YOUR TEXT FOR CHANGE" mode={mode} showalert={showalert}/>
+          <Textform className="my-3" heading ="ENTER YOUR TEXT FOR CHANGE" mode={mode} showalert={showalert}/>
           </Route>
     </Switch>
      {/* <About/> */}
