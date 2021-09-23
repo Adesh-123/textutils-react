@@ -38,10 +38,22 @@ export default function Navbar(props) {
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form> */}
-        <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
-           <input className="form-check-input" type="checkbox" onClick={props.toggleMode}  id="flexSwitchCheckDefault"/>
+      <div >Toggle mode</div>
+        <div class="  mb-2 bg-primary text-white" onClick={()=>{props.toggleMode('primary')}} style={{height: '24px', width: '23px', marginLeft:'3px',marginRight:'3px'}}></div>
+         <div class="  mb-2 bg-secondary text-white"onClick={()=>{props.toggleMode('secondary')}} style={{height: '24px', width: '23px' , marginLeft:'3px',marginRight:'3px'}}></div>
+         <div class="  mb-2 bg-success text-white" onClick={()=>{props.toggleMode('success')}} style={{height: '24px', width: '23px', marginLeft:'3px',marginRight:'3px'}}></div>
+         <div class="  mb-2 bg-danger text-white"onClick={()=>{props.toggleMode('danger')}} style={{height: '24px', width: '23px', marginLeft:'3px',marginRight:'3px'}}></div>
+         <div class="  mb-2 bg-warning text-dark"onClick={()=>{props.toggleMode('warning')}} style={{height: '24px', width: '23px', marginLeft:'3px',marginRight:'3px'}}></div>
+         <div class="  mb-2 bg-info text-white" onClick={()=>{props.toggleMode('info')}} style={{height: '24px', width: '23px', marginLeft:'3px',marginRight:'3px'}}></div>
+         <div class="  mb-2 bg-light text-dark" onClick={()=>{props.toggleMode('light')}} style={{height: '24px', width: '23px', marginLeft:'3px',marginRight:'3px'}}></div>
+         <div class="  mb-2 bg-dark text-white"  onClick={()=>{props.toggleMode('dark')}} style={{height: '24px', width: '23px', marginLeft:'3px',marginRight:'3px'}}></div>
+         {/* <div class="  mb-2 bg-white text-dark"onClick={props.toggleMode} style={{height: '24px', width: '23px', marginLeft:'3px',marginRight:'3px'}}></div> */}
+
+
+        {/* <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+           <input className="form-check-input" type="checkbox" onClick={()=>{props.toggleMode(null)}}  id="flexSwitchCheckDefault"/>
            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable dark mde</label>
-       </div>
+       </div> */}
     </div>
   </div>
 </nav>

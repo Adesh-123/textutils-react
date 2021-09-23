@@ -27,7 +27,7 @@ export default function Textform(props) {
     const[text,setText] =useState('');
     return (
         <>
-       <div className ="container "  style={{color:props.mode==='light'?'black':'white'}}>
+       <div className ="container "  style={{color:props.text}}>
            <h3 className="my-3">{props.heading}</h3>
        <div>
          <div className="mb-3">     
@@ -38,7 +38,7 @@ export default function Textform(props) {
            <button disabled={text.length===0} className="btn btn-primary  mx-3 my-3"  onClick={clear} >Clear</button>
         </div>
        </div>
-       <div style={{color:props.mode==='light'?'black':'white'}}>
+       <div style={{color:props.text}}>
        <h3>your text summary</h3>
        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} character</p>
        <p>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} minute read</p>
